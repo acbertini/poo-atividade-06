@@ -1,7 +1,7 @@
     <%-- 
-        Document   : index
-        Created on : Jun 10, 2018, 10:04:55 AM
-        Author     : AnaBertini
+        Document   : Consulta
+        Created on : Jun 20, 2018, 00:28:12 AM
+        Author     : Junior
     --%>
 
     <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,7 +11,7 @@
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Home</title>    
+      <title>Consultas</title>    
       <link href="src/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
       <link href="src/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
       <link href="src/css/style.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
             <div class="container">
               <div class="col-md-12">
                 <div class="navbar-header">
-                    <%@include file="WEB-INF/jspf/header.jspf"%>
+                
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                                             <span class="icon-bar"></span>
                                             <span class="icon-bar"></span>

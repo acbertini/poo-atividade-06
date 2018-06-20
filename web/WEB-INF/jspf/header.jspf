@@ -19,7 +19,6 @@
         response.sendRedirect(request.getRequestURI());
     }
 %>
-<h3>Pagina web</h3>
 <%if(errorMessage!=null){%>
 <h3 style="color: red"><%= errorMessage %></h3>
 <%}%>
