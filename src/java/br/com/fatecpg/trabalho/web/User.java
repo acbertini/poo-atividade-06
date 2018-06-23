@@ -100,4 +100,17 @@ public class User {
         }
         return users;
     }
+    
+    public static void addUser(String name, String role, String login, long passwordHash) throws Exception{
+        String SQL = "INSERT INTO USERS VALUES (default, ?, ?, ?, ?)";
+        Object[] parameters = {name, role, login, passwordHash};
+        DatabaseConnector.execute(SQL, parameters);
+    }
+
+    public static void removeUser(long id) throws Exception{
+        String SQL = "DELETE FROM USERS WHERE ID=?";
+        Object[] parameters = {id};
+        DatabaseConnector.execute(SQL, parameters);
+    }    
+    
 }
