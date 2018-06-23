@@ -40,7 +40,8 @@
                     <h1 class="white">Seja bem vindo!!!</h1>
                     <h1 class="white"> Ainda não tem conta? Cadastre-se</h1>
                     <p>Marque sua consulta com Médicos cadastrados, e tenha acesso a resultados de Exames.</p>
-                  <a href="#contact" class="btn btn-appoint">CADASTRE-SE</a>
+                  <a href="#contact" class="btn btn-appoint">CADASTRE-SE</a><br/><br/>
+                  <a href="agenda.jsp" class="btn btn-danger">AGENDA TESTE</a>
                 </div>               
               </div>
             </div>
