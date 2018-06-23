@@ -32,7 +32,10 @@
 <%} else {%>
 <form method="post">
     <%User user = (User) session.getAttribute("user"); %>
-    Bem vindo, <%= user.getName() %> [<%= user.getRole() %>]
+    Bem vindo, <%= user.getName() %> [<%= user.getRole() %>] 
+    <% if(user.getRole().equals("ADMIN")){ %> ||
+    <a href="<%=path%>/admin/users.jsp">Usuários</a> ||
+    <% } %>
     <input type="submit" name="formLogoff" value="Sair"/>
 </form>
 <%}%>

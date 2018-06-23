@@ -83,4 +83,21 @@ public class User {
             return user;
         }
     }
+    
+    public static ArrayList<User> getUsers() throws Exception{
+        String SQL = "SELECT * FROM USERS";
+        ArrayList<User> users = new ArrayList<>();
+        ArrayList<Object[]> list = DatabaseConnector.getQuery(SQL, new Object[]{});
+        for(int i=0; i<list.size(); i++){
+            Object row[] = list.get(i);
+            User user = new User(
+                    (long) row[0], 
+                    (String) row[1], 
+                    (String) row[2], 
+                    (String) row[3], 
+                    (long) row[4]);
+            users.add(user);
+        }
+        return users;
+    }
 }
