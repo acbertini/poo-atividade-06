@@ -6,7 +6,7 @@
 
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.text.DateFormat"%>
-<%@page import="java.sql.Date"%>
+<%@page import="java.util.Date"%>
 <%@page import="br.com.fatecpg.trabalho.web.Appointment"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -22,13 +22,13 @@
         }
     }
     if (request.getParameter("formNewAvailableAppointment") != null) {
-//        DateFormat format = new SimpleDateFormat("dd/mm/yyyy");
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//        Date date = sdf.parse(request.getParameter("date"));
-//          long doctorID = Long.parseLong(request.getParameter("id"));
+        DateFormat format = new SimpleDateFormat("dd/mm/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = sdf.parse(request.getParameter("date"));
+          long doctorID = Long.parseLong(request.getParameter("id"));
         try {
-//            Appointment.addAvailableAppointment(date, doctorID);
-//            response.sendRedirect(request.getRequestURI());
+            Appointment.addAvailableAppointment(date, doctorID);
+            response.sendRedirect(request.getRequestURI());
         } catch (Exception e) {
             error = e.getMessage();
         }
