@@ -1,10 +1,8 @@
-<%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 <fieldset>
     <legend>Novo médico</legend>
     <form method="post">
         Nome: <input type="text" name="name"/>
-        
         Especialidade:
         <select name="role">
             <option value="1">Cardiologista</option>

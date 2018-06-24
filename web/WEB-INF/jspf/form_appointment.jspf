@@ -1,0 +1,14 @@
+<%@ page pageEncoding="UTF-8" %>
+<fieldset>
+    <legend>Novo horário disponível para consulta</legend>
+    <form method="post">
+        Dia: <input type="date" name="date"/>
+        Horário:
+        <select name="role">
+            <% for (int i=9; i<=16; i++) {%>
+                <option value="<%=i%>"><%=i%>:00</option>
+            <% } %>
+        </select>
+        <input type="submit" name="formNewAvailableAppointment" value="Add"/>
+    </form>
+</fieldset>

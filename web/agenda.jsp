@@ -35,7 +35,7 @@
                 <th>Paciente</th>
                 <th>Data</th>
             </tr>
-            <% for(Appointment a: Appointment.getAppointments()){ %>
+            <% for(Appointment a: Appointment.getTakenAppointments(user.getId())){ %>
             <tr>
                 <td><%= a.getId() %></td>
                 <td>Nome paciente</td>

@@ -37,6 +37,7 @@
     <a href="<%=path%>/admin/users.jsp">Usuários</a> ||
     <% } else if(user.getRole().equals("medico") || user.getRole().equals("MEDICO")) {%>
     <a href="<%=path%>/agenda.jsp">Sua agenda</a> ||
+    <a href="<%=path%>/doctor/add_appointments.jsp">Adicionar horários</a> ||
     <% } else if(user.getRole().equals("paciente") || user.getRole().equals("PACIENTE")){%>
     <a href="<%=path%>/pesquisa.jsp">Agendar consultas</a> ||
     <a href="<%=path%>/consulta.jsp">Consultas marcadas</a> || 
