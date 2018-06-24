@@ -1,6 +1,7 @@
 package br.com.fatecpg.trabalho.web;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 public class Appointment {
     private long id;
@@ -47,6 +48,20 @@ public class Appointment {
         this.user_id = user_id;
     }
     
-    
+    public static ArrayList<Appointment> getAppointments() throws Exception{
+        String SQL = "SELECT * FROM MEDICAL_APPOINTMENT";
+        ArrayList<Appointment> appointments = new ArrayList<>();
+        ArrayList<Object[]> list = DatabaseConnector.getQuery(SQL, new Object[]{});
+        for(int i=0; i<list.size(); i++){
+            Object row[] = list.get(i);
+            Appointment ap = new Appointment(
+                    (long) row[0], 
+                    (Date) row[1], 
+                    (long) row[2], 
+                    (long) row[3]);
+            appointments.add(ap);
+        }
+        return appointments;
+    }
    
 }

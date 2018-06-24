@@ -9,24 +9,24 @@
 <!DOCTYPE html>
 <%
     String error = null;
-    if(request.getParameter("formDeleteUser")!= null){
-        try{
+    if (request.getParameter("formDeleteUser") != null) {
+        try {
             long id = Long.parseLong(request.getParameter("id"));
             User.removeUser(id);
             response.sendRedirect(request.getRequestURI());
-        } catch (Exception e){
+        } catch (Exception e) {
             error = e.getMessage();
         }
     }
-    if(request.getParameter("formNewUser")!=null){
-        String name = request.getParameter("name");
+    if (request.getParameter("formNewUser") != null) {
         String role = request.getParameter("role");
+        String name = request.getParameter("name");
         String login = request.getParameter("login");
         long hash = request.getParameter("pass").hashCode();
-        try{
-            User.addUser(name, role, login, hash);
+        try {
+            User.addUser(role, name, login, hash);
             response.sendRedirect(request.getRequestURI());
-        } catch (Exception e){
+        } catch (Exception e) {
             error = e.getMessage();
         }
     }
@@ -46,7 +46,7 @@
         <% if (!user.getRole().equals("admin")) { %>
         <h3>Conteúdo exclusivo para admin do sistema</h3>
         <% } else { %>
-        <% if(error!=null){%>
+        <% if (error != null) {%>
         <h3><%=error%></h3>
         <%}%>
         <fieldset>
@@ -65,15 +65,17 @@
             </form>
         </fieldset>
         <br/>
+        <%@include file="../WEB-INF/jspf/form_doctor.jspf"%>
+        <br/>
         <table border="1px">
             <tr>
                 <th>ID</th>
                 <th>Papel</th>
                 <th>Nome</th>
                 <th>Login</th>
-                <th>Comando</th>
-            <tr>
-            <% for(User u: User.getUsers()){ %>
+                <th>Excluir</th>
+            </tr>
+            <% for (User u : User.getUsers()) {%>
             <tr>
                 <td><%=u.getId()%></td>
                 <td><%=u.getRole()%></td>
