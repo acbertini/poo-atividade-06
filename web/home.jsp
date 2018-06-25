@@ -38,6 +38,8 @@
                         <%@include file="WEB-INF/jspf/header.jspf"%>
                     </a>
                     <h1 class="white">Seja bem vindo!!!</h1>
+                    <p>Clique em ESPECIALIDADES e conheça nossos Médicos e suas Especialidades</p>
+                    <a href="especialidades.jsp" class="btn btn-appoint">ESPECIALISTAS</a>
                     <h1 class="white"> Ainda não tem conta? Cadastre-se</h1>
                     <p>Marque sua consulta com Médicos cadastrados, e tenha acesso a resultados de Exames.</p>
                   <a href="#contact" class="btn btn-appoint">CADASTRE-SE</a><br/><br/>
@@ -45,7 +47,7 @@
                 </div>               
               </div>
             </div>
-          </div>
+          </div><footer><%@include file="WEB-INF/jspf/footer.jspf" %></footer>
         </div>
       </section>
     </body>
