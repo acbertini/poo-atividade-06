@@ -27,8 +27,8 @@
         Date date = sdf.parse(request.getParameter("date"));
           long doctorID = Long.parseLong(request.getParameter("id"));
         try {
-            Appointment.addAvailableAppointment(date, doctorID);
-            response.sendRedirect(request.getRequestURI());
+//            Appointment.addAvailableAppointment(date, doctorID);
+//            response.sendRedirect(request.getRequestURI());
         } catch (Exception e) {
             error = e.getMessage();
         }

@@ -4,10 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/web/WEB-INF/jspf/header.jspf</file>
+            <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/sql/db-creation-script.sql</file>
             <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/src/java/br/com/fatecpg/trabalho/web/User.java</file>
             <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/web/admin/users.jsp</file>
             <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/src/java/br/com/fatecpg/trabalho/web/Appointment.java</file>
             <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/web/doctor/add_appointments.jsp</file>
+            <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/src/java/br/com/fatecpg/trabalho/web/DatabaseConnector.java</file>
             <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/web/WEB-INF/jspf/form_doctor.jspf</file>
             <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/web/WEB-INF/jspf/form_appointment.jspf</file>
         </group>
