@@ -9,12 +9,19 @@ public class Appointment {
     private Date date_appointment;
     private long doctor_id;
     private long user_id;
+    private String user_name;
 
     public Appointment(long id, Date date_appointment, long doctor_id, long user_id) {
         this.id = id;
         this.date_appointment = date_appointment;
         this.doctor_id = doctor_id;
         this.user_id = user_id;
+    }
+
+    public Appointment(long id, Date date_appointment, String user_name) {
+        this.id = id;
+        this.date_appointment = date_appointment;
+        this.user_name = user_name;
     }
 
     public long getId() {
@@ -49,6 +56,14 @@ public class Appointment {
         this.user_id = user_id;
     }
 
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+    }
+
     public static void addAvailableAppointment(Date date, long doctorID) throws Exception {
         String SQL = "INSERT INTO MEDICAL_APPOINTMENT VALUES(default, ?, ?)";
         Object[] parameters = {date, doctorID};
@@ -61,8 +76,11 @@ public class Appointment {
         DatabaseConnector.execute(SQL, parameters);
     }
 
-    public static ArrayList<Appointment> getAllAppointments() throws Exception {
-        String SQL = "SELECT * FROM MEDICAL_APPOINTMENT";
+    public static ArrayList<Appointment> getAllAppointments(long doctorID) throws Exception {
+        String SQL = "SELECT APPOINTMENT_ID, DATE_APPOINTMENT, USERS.NAME\n"
+                + "FROM MEDICAL_APPOINTMENT, USERS\n"
+                + "WHERE MEDICAL_APPOINTMENT.ID = USERS.ID\n"
+                + "AND DOCTOR_ID ="+doctorID+"";
         ArrayList<Appointment> appointments = new ArrayList<>();
         ArrayList<Object[]> list = DatabaseConnector.getQuery(SQL, new Object[]{});
         for (int i = 0; i < list.size(); i++) {
@@ -70,8 +88,7 @@ public class Appointment {
             Appointment ap = new Appointment(
                     (long) row[0],
                     (Date) row[1],
-                    (long) row[2],
-                    (long) row[3]);
+                    (String) row[2]);
             appointments.add(ap);
         }
         return appointments;
@@ -92,4 +109,5 @@ public class Appointment {
         }
         return appointments;
     }
+
 }

@@ -31,14 +31,14 @@
         <%}%>
         <table border="1px">
             <tr>
-                <th>Codigo consulta</th>
+                <th>Cod consulta</th>
                 <th>Paciente</th>
                 <th>Data</th>
             </tr>
-            <% for(Appointment a: Appointment.getTakenAppointments(user.getId())){ %>
+            <% for (Appointment a : Appointment.getAllAppointments(user.getId())) {%>
             <tr>
-                <td><%= a.getId() %></td>
-                <td>Nome paciente</td>
+                <td><%= a.getId()  %></td>
+                <td><%= a.getUser_name() %></td>
                 <td><%= a.getDate_appointment() %></td>
             </tr>
             <% } %>
