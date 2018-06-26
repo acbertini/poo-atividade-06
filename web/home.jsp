@@ -9,8 +9,8 @@
 <html lang="pt-br">
     
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Home</title>    
       <link href="src/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
       <link href="src/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
@@ -30,24 +30,24 @@
             <div class="row">
               <div class="banner-info">
                 <div class="banner-logo text-center">                  
-                  <a class="center-block" href="#"><img src="src/img/logo.png" class="img-responsive" style="width: 250px; margin-top: -250px;"></a>                  
+                  <a class="center-block" href="#">
+                      <img src="src/img/logo.png" class="img-responsive" style="width: 250px; margin-top: -250px;">
+                  </a><br>                  
                 </div>
-                <div class="banner-text text-center">
-                    <p>Entre com seus dados:</p>
+                <div class="banner-text text-center" style= "margin-top: -75px;">
                     <a class="white text-center">
-                        <%@include file="WEB-INF/jspf/header.jspf"%>
-                    </a>
-                    <h1 class="white">Seja bem vindo!!!</h1>
-                    <p>Clique em ESPECIALIDADES e conheça nossos Médicos e suas Especialidades</p>
-                    <a href="especialidades.jsp" class="btn btn-appoint">ESPECIALISTAS</a>
-                    <h1 class="white"> Ainda não tem conta? Cadastre-se</h1>
-                    <p>Marque sua consulta com Médicos cadastrados, e tenha acesso a resultados de Exames.</p>
-                  <a href="#contact" class="btn btn-appoint">CADASTRE-SE</a><br/><br/>
-                  <a href="agenda.jsp" class="btn btn-danger">AGENDA TESTE</a>
+                      <%@include file="WEB-INF/jspf/header.jspf"%>
+                    </a>                    
+                    <h1 class="white"> Ainda não tem conta?</h1>
+                    <h1 class="white">Cadastre-se</h1>
+                    <a href="home1.jsp" class="btn btn-appoint">CADASTRE-SE</a>                 
                 </div>               
               </div>
             </div>
-          </div><footer><%@include file="WEB-INF/jspf/footer.jspf" %></footer>
+          </div>
+                    <div class="banner-logo text-center center-block" style="margin-top: 20px;"><br>
+                      <footer><%@include file="WEB-INF/jspf/footer.jspf"%></footer>
+                    </div>
         </div>
       </section>
     </body>

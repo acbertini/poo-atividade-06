@@ -3,15 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/web/WEB-INF/jspf/header.jspf</file>
-            <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/sql/db-creation-script.sql</file>
-            <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/src/java/br/com/fatecpg/trabalho/web/User.java</file>
-            <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/web/admin/users.jsp</file>
-            <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/src/java/br/com/fatecpg/trabalho/web/Appointment.java</file>
-            <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/web/doctor/add_appointments.jsp</file>
-            <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/src/java/br/com/fatecpg/trabalho/web/DatabaseConnector.java</file>
-            <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/web/WEB-INF/jspf/form_doctor.jspf</file>
-            <file>file:/C:/Users/AnaBertini/Documents/GitHub/poo-atividade-06/web/WEB-INF/jspf/form_appointment.jspf</file>
+            <file>file:/C:/Users/Junior/Documents/NetBeansProjects/Projeto06/poo-atividade-06/web/especialidades.jsp</file>
+            <file>file:/C:/Users/Junior/Documents/NetBeansProjects/Projeto06/poo-atividade-06/web/exames.jsp</file>
+            <file>file:/C:/Users/Junior/Documents/NetBeansProjects/Projeto06/poo-atividade-06/web/src/css/style.css</file>
+            <file>file:/C:/Users/Junior/Documents/NetBeansProjects/Projeto06/poo-atividade-06/web/WEB-INF/jspf/header.jspf</file>
+            <file>file:/C:/Users/Junior/Documents/NetBeansProjects/Projeto06/poo-atividade-06/web/home.jsp</file>
+            <file>file:/C:/Users/Junior/Documents/NetBeansProjects/Projeto06/poo-atividade-06/web/consulta.jsp</file>
+            <file>file:/C:/Users/Junior/Documents/NetBeansProjects/Projeto06/poo-atividade-06/web/cadastro.jsp</file>
         </group>
     </open-files>
 </project-private>
