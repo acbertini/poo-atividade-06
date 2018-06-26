@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : home1
     Created on : 25/06/2018, 21:12:15
     Author     : Junior
@@ -31,10 +31,10 @@
               <div class="banner-info">
                 <div class="banner-logo text-center">                  
                   <a class="center-block" href="#">
-                      <img src="src/img/logo.png" class="img-responsive" style="width: 250px; margin-top: -250px;">
+                      <img src="src/img/logo.png" class="img-responsive" style="width: responsive; margin-top: -250px;">
                   </a>                  
                 </div>
-                <div class="banner-text text-center" style= "margin-top: -75px;">                    
+                <div class="banner-text text-center">                    
                     <a class="white text-center">
                         <!--Aqui colocar o usuario logado-->
                     </a>
@@ -42,7 +42,7 @@
                     <h1 class="white">Seja bem vindo!!!</h1>
                     <p>Clique em ESPECIALIDADES e conheça nossos Médicos e suas Especialidades</p>
                     <p>Marque sua consulta com Médicos cadastrados, e tenha acesso a resultados de Exames.</p>
-                    <div class="btn-group-justified">
+                    <div class="btn-group-justified" style= "width:responsive; margin-top: 100px;">
                     <a href="especialidades.jsp" class="btn btn-appoint">ESPECIALISTAS</a>
                     <a href="agenda.jsp" class="btn btn-danger">AGENDA TESTE</a> 
                     </div>                    

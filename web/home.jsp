@@ -31,7 +31,7 @@
               <div class="banner-info">
                 <div class="banner-logo text-center">                  
                   <a class="center-block" href="#">
-                      <img src="src/img/logo.png" class="img-responsive" style="width: 250px; margin-top: -250px;">
+                      <img src="src/img/logo.png" class="img-responsive" style="width: 200px; margin-top: -250px;">
                   </a><br>                  
                 </div>
                 <div class="banner-text text-center" style= "margin-top: -75px;">
@@ -49,6 +49,6 @@
                       <footer><%@include file="WEB-INF/jspf/footer.jspf"%></footer>
                     </div>
         </div>
-      </section>
+      </section>  
     </body>
 </html>
