@@ -39,11 +39,11 @@
                 </div>
                 <div class="collapse navbar-collapse navbar-right" id="myNavbar">                     
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="#banner">Home</a></li>
-                    <li class=""><a href="#service">Serviços</a></li>
-                    <li class=""><a href="#about">Cadastro</a></li>
-                    <li class=""><a href="#testimonial">Consultas</a></li>
-                    <li class=""><a href="#contact">Contato</a></li>
+                    <li class="active"><a href="#home1">Home</a></li>
+                    <li class=""><a href="#exame">Exames</a></li>
+                    <li class=""><a href="#especialidade">Especialidades</a></li>
+                    <li class=""><a href="#consulta">Consultas</a></li>
+                    <li class=""><a href="#cadastro">Cadastro</a></li>
                   </ul>
                 </div>
               </div>
@@ -51,15 +51,34 @@
           </nav>
           <div class="container">
             <div class="row">
-              <div class="banner-info">
-                <div class="banner-text text-center">
-                  <h1 class="white">Aqui vou inserir o Form para cadastrar usuário</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a href="#contact" class="btn btn-appoint">Contate-nos</a>
-                </div>               
+              <div class="banner-info">                
+                    <div class="banner-text text-center">
+                        <h1 class="white">Insira seus dados para cadastro</h1>
+             
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Digite seu Nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
               </div>
+              <div class="form-group">
+                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Digite seu Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Digite seu endereço" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Digite a especialidade procurada"></>
+              </div>
+              <div class="form-action">
+                <a href="#contact" class="btn btn-appoint">SALVAR</a>
+              </div>
+            </form>
             </div>
-          </div>
+            </div>                 
+            </div>   
+            </div>
         </div>
       </section>
     </body>
