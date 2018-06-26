@@ -8,24 +8,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Especialidades</title>
     </head>
-    <body>
-        <%@include file="WEB-INF/jspf/header.jspf" %>
-        <h1>Bem Vindo!</h1>
-        <table border="1 px">
-            <tr>
-                <th>Especialidade</th>
-                <th>Médico</th>
-            </tr>
-            
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-            
-        </table>
-        <% %>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+        <!--banner-->
+        <section id="banner" class="banner">
+            <div class="bg-color">
+                <div class="container">
+                    <div class="row">
+                        <div class="banner-info">
+                            <div class="banner-text text-center" style= "margin-top: -75px;">
+                                <a class="white text-center">
+                                    <%@include file="WEB-INF/jspf/header.jspf"%>
+                                </a>
+                            </div>     
+                                <h3 class="white">Especialidade</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-logo text-center center-block" style="margin-top: 20px;"><br>
+                    <footer><%@include file="WEB-INF/jspf/footer.jspf"%></footer>
+                </div>
+            </div>
+        </section>  
     </body>
 </html>
