@@ -39,11 +39,11 @@
                 </div>
                 <div class="collapse navbar-collapse navbar-right" id="myNavbar">                     
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="#home1">Home</a></li>
-                    <li class=""><a href="#exame">Exames</a></li>
-                    <li class=""><a href="#especialidade">Especialidades</a></li>
-                    <li class=""><a href="#consulta">Consultas</a></li>
-                    <li class=""><a href="#cadastro">Cadastro</a></li>
+                    <li class="active"><a href="home1.jsp">Home</a></li>
+                    <li class=""><a href="exames.jsp">Exames</a></li>
+                    <li class=""><a href="especialidades.jsp">Especialidades</a></li>
+                    <li class=""><a href="consulta.jsp">Consultas</a></li>
+                    <li class=""><a href="pesquisa.jsp">Pesquisa</a></li>
                   </ul>
                 </div>
               </div>
