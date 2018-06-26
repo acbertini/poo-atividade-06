@@ -53,5 +53,15 @@
         <%}%>
         <%}%>
         <%}%>
+        
+                </div>               
+              </div>
+            </div>
+          </div>
+                <div class="banner-logo text-center center-block" style="margin-top: 20px;"><br>
+                    <footer><%@include file="WEB-INF/jspf/footer.jspf"%></footer>
+                </div>
+        </div>
+      </section>
     </body>
 </html>
