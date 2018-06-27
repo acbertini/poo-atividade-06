@@ -30,7 +30,7 @@
             error = e.getMessage();
         }
     }
-    if (request.getParameter("formNewDoctor") != null){
+    if (request.getParameter("formNewDoctor") != null) {
         String role = "medico";
         String name = request.getParameter("name");
         int especialidade = Integer.parseInt(request.getParameter("type"));
@@ -48,76 +48,92 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Controle de Usuários</title>
-        <%@include file="../WEB-INF/jspf/header.jspf"%>
+        <%@include file="header.jspf"%>
     </head>
-    <body>
-        <h1>Usuários!</h1>
-        <% if (session.getAttribute("user") == null) { %>
-        <h3>É preciso se logar para ver o conteúdo!</h3>
-        <% } else { %>
-        <% User user = (User) session.getAttribute("user"); %>
-        <% if (!user.getRole().equals("admin")) { %>
-        <h3>Conteúdo exclusivo para admin do sistema</h3>
-        <% } else { %>
-        <% if (error != null) {%>
-        <h3><%=error%></h3>
-        <%}%>
-        <fieldset>
-            <legend>Novo usuário</legend>
-            <form method="post">
-                Nome: <input type="text" name="name"/>
-                Papel:
-                <select name="role">
-                    <option value="admin">admin</option>
-                    <option value="paciente">paciente</option>
-                </select>
-                Login: <input type="text" name="login"/>
-                Pass: <input type="password" name="pass"/>
-                <input type="submit" name="formNewUser" value="Add"/>
-            </form>
-        </fieldset>
-        <br/>
-        <fieldset>
-            <legend>Novo médico</legend>
-            <form method="post">
-                Nome: <input type="text" name="name"/>
-                Especialidade:
-                <select name="type">
-                    <option value="1">Cardiologista</option>
-                    <option value="2">Clínico geral</option>
-                    <option value="3">Dermatologista</option>
-                    <option value="4">Pediatra</option>
-                </select>
-                Login: <input type="text" name="login"/>
-                Pass: <input type="password" name="pass"/>
-                <input type="submit" name="formNewDoctor" value="Add"/>
-            </form>
-        </fieldset>
-        <br/>
-        <table border="1px">
-            <tr>
-                <th>ID</th>
-                <th>Papel</th>
-                <th>Nome</th>
-                <th>Login</th>
-                <th>Excluir</th>
-            </tr>
-            <% for (User u : User.getUsers()) {%>
-            <tr>
-                <td><%=u.getId()%></td>
-                <td><%=u.getRole()%></td>
-                <td><%=u.getName()%></td>
-                <td><%=u.getLogin()%></td>
-                <td>
-                    <form>
-                        <input type="hidden" name="id" value="<%=u.getId()%>"/>
-                        <input type="submit" name="formDeleteUser" value="Remover"/>
-                    </form>
-                </td>
-            </tr>
-            <% } %>
-        </table>
-        <% } %>
-        <% }%>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+        <!--banner-->
+        <section id="banner" class="banner">
+            <div class="bg-color">
+                <div class="container">
+                    <div class="row">
+                        <div class="banner-info">
+                            <div class="banner-text text-center" style= "margin-top: -75px;">
+                                <h1>Usuários!</h1>
+                                <% if (session.getAttribute("user") == null) { %>
+                                <h3>É preciso se logar para ver o conteúdo!</h3>
+                                <% } else { %>
+                                <% User user = (User) session.getAttribute("user"); %>
+                                <% if (!user.getRole().equals("admin")) { %>
+                                <h3>Conteúdo exclusivo para admin do sistema</h3>
+                                <% } else { %>
+                                <% if (error != null) {%>
+                                <h3><%=error%></h3>
+                                <%}%>
+                                <fieldset>
+                                    <legend>Novo usuário</legend>
+                                    <form method="post">
+                                        Nome: <input type="text" name="name"/>
+                                        Papel:
+                                        <select name="role">
+                                            <option value="admin">admin</option>
+                                            <option value="paciente">paciente</option>
+                                        </select>
+                                        Login: <input type="text" name="login"/>
+                                        Pass: <input type="password" name="pass"/>
+                                        <input type="submit" name="formNewUser" value="Add"/>
+                                    </form>
+                                </fieldset>
+                                <br/>
+                                <fieldset>
+                                    <legend>Novo médico</legend>
+                                    <form method="post">
+                                        Nome: <input type="text" name="name"/>
+                                        Especialidade:
+                                        <select name="type">
+                                            <option value="1">Cardiologista</option>
+                                            <option value="2">Clínico geral</option>
+                                            <option value="3">Dermatologista</option>
+                                            <option value="4">Pediatra</option>
+                                        </select>
+                                        Login: <input type="text" name="login"/>
+                                        Pass: <input type="password" name="pass"/>
+                                        <input type="submit" name="formNewDoctor" value="Add"/>
+                                    </form>
+                                </fieldset>
+                                <br/>
+                                <table class="table">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Papel</th>
+                                        <th>Nome</th>
+                                        <th>Login</th>
+                                        <th>Excluir</th>
+                                    </tr>
+                                    <% for (User u : User.getUsers()) {%>
+                                    <tr>
+                                        <td><%=u.getId()%></td>
+                                        <td><%=u.getRole()%></td>
+                                        <td><%=u.getName()%></td>
+                                        <td><%=u.getLogin()%></td>
+                                        <td>
+                                            <form>
+                                                <input type="hidden" name="id" value="<%=u.getId()%>"/>
+                                                <input type="submit" name="formDeleteUser" value="Remover"/>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                                </table>
+                                <% } %>
+                                <% }%>
+                            </div>                                
+                        </div>               
+                    </div>
+                </div>
+            </div>
+            <div class="banner-logo text-center center-block" style="margin-top: -75px;"><br>
+                <footer><%@include file="../WEB-INF/jspf/footer.jspf"%></footer>
+            </div>            
+        </section>  
     </body>
 </html>
