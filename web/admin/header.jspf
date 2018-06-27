@@ -64,16 +64,16 @@
             <ul class="nav navbar-nav">
                 <%User user = (User) session.getAttribute("user");%>
                 <li class="active"><a href="home1.jsp">Home</a></li>
-                <li class=""><a href="especialidades.jsp">Especialidades</a></li>
-                <li class=""><a href="pesquisa.jsp">Pesquisa</a></li>
+                <li class=""><a href="../especialidades.jsp">Especialidades</a></li>
+                <li class=""><a href="../pesquisa.jsp">Pesquisa</a></li>
                     <% if (user.getRole().equals("admin") || user.getRole().equals("ADMIN")) {%>
-                <li><a href="admin/users.jsp">Usuários</a></li>
+                <li><a href="users.jsp">Usuários</a></li>
                     <% } else if (user.getRole().equals("medico") || user.getRole().equals("MEDICO")) {%>
-                <li><a href="agenda.jsp">Sua agenda</a></li>
-                <li><a href="doctor/add_appointments.jsp">Adicionar horários</a></li>
+                <li><a href="../agenda.jsp">Sua agenda</a></li>
+                <li><a href="../doctor/add_appointments.jsp">Adicionar horários</a></li>
                     <% } else if (user.getRole().equals("paciente") || user.getRole().equals("PACIENTE")) {%>
-                <li><a href="pesquisa.jsp">Agendar consultas</a></li>
-                <li><a href="consulta.jsp">Consultas</a></li>
+                <li><a href="../pesquisa.jsp">Agendar consultas</a></li>
+                <li><a href="../consulta.jsp">Consultas</a></li>
                 <!--<li><a href="exames.jsp">Resultados</a></li>-->
                     <% }%>
                 <li class="">
