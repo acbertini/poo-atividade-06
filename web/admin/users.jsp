@@ -69,24 +69,20 @@
                                 <% if (error != null) {%>
                                 <h3><%=error%></h3>
                                 <%}%>
-                                
-                                <fieldset>
-                                    
-                                        <legend class="white">Novo usuário</legend>
-                                    
-                                    <form method="post">
-                                        Nome: <input style="color: #000" type="text" name="name"/>
-                                        Papel:
-                                        <select style="color: #000"  name="role">
-                                            <option value="admin">admin</option>
-                                            <option value="paciente">paciente</option>
-                                        </select>
-                                        Login: <input style="color: #000"  type="text" name="login"/>
-                                        Pass: <input style="color: #000"  type="password" name="pass"/>
-                                        <input style="color: #000"  type="submit" name="formNewUser" value="Add"/>
-                                    </form>
-                                </fieldset>
+                                <form method="post">
+                                    Nome: <input style="color: #000" type="text" name="name"/>
+                                    Papel:
+                                    <select style="color: #000"  name="role">
+                                        <option value="admin">admin</option>
+                                        <option value="paciente">paciente</option>
+                                        <option value="medico">medico</option>
+                                    </select>
+                                    Login: <input style="color: #000"  type="text" name="login"/>
+                                    Pass: <input style="color: #000"  type="password" name="pass"/>
+                                    <input style="color: #000"  type="submit" name="formNewUser" value="Add"/>
+                                </form>
                                 <br/>
+                                <!--
                                 <fieldset>
                                     <legend class="white">Novo médico</legend>
                                     <form method="post">
@@ -103,6 +99,7 @@
                                         <input style="color: #000"  type="submit" name="formNewDoctor" value="Add"/>
                                     </form>
                                 </fieldset>
+                                -->
                                 <br/>
                                 <table class="table">
                                     <tr>
@@ -133,11 +130,11 @@
                         </div>               
                     </div>
                 </div>
-                            <div class="banner-logo text-center center-block" style="padding-top: 10px;"><br>
-                <footer><%@include file="../WEB-INF/jspf/footer.jspf"%></footer>
-            </div>       
+                <div class="banner-logo text-center center-block" style="padding-top: 10px;"><br>
+                    <footer><%@include file="../WEB-INF/jspf/footer.jspf"%></footer>
+                </div>       
             </div>
-                 
+
         </section>  
     </body>
 </html>

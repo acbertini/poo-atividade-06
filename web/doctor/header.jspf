@@ -49,7 +49,7 @@
                     <li class=""><a href="cadastro.jsp">Cadastro</a></li>
                     <li class=""><a href="pesquisa.jsp">Pesquisa</a></li>
                     <li class=""><a href="consulta.jsp">Consulta</a></li>
-                    <li class=""><a href="exames.jsp">Exames</a></li>
+                    <!--<li class=""><a href="exames.jsp">Exames</a></li>-->
                 </ul>
             </div>
                     <div class="collapse navbar-collapse navbar-right" id="myNavbar" style="margin-right: -1100px;">
@@ -64,8 +64,8 @@
                 <ul class="nav navbar-nav">
                     <%User user = (User) session.getAttribute("user");%>
                     <li class="active"><a href="home1.jsp">Home</a></li>
-                    <li class=""><a href="especialidades.jsp">Especialidades</a></li>
-                    <li class=""><a href="pesquisa.jsp">Pesquisa</a></li>
+                    <li class=""><a href="../especialidades.jsp">Especialidades</a></li>
+                    <li class=""><a href="../pesquisa.jsp">Pesquisa</a></li>
                         <% if (user.getRole().equals("admin") || user.getRole().equals("ADMIN")) {%>
                     <li><a href="../admin/users.jsp">Usuários</a></li>
                         <% } else if (user.getRole().equals("medico") || user.getRole().equals("MEDICO")) {%>
@@ -74,7 +74,7 @@
                         <% } else if (user.getRole().equals("paciente") || user.getRole().equals("PACIENTE")) {%>
                     <li><a href="../pesquisa.jsp">Agendar consultas</a></li>
                     <li><a href="../consulta.jsp">Consultas</a></li>
-                    <li><a href="../exames.jsp">Resultados</a></li>
+                    <!--<li><a href="../exames.jsp">Resultados</a></li>-->
                         <% }%>
                     <li class="">
                         <form method="post">
