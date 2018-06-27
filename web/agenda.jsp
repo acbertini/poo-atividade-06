@@ -12,12 +12,22 @@
 %>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Agenda de consultas</title>
-        <%@include file="WEB-INF/jspf/header.jspf"%>
+        <title>Agendamento</title>
     </head>
-    <body>
-        <h1>Sua agenda de consultas!</h1>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+        <!--banner-->
+        <section id="banner" class="banner">
+            <div class="bg-color">
+                <div class="container">
+                    <div class="row">
+                        <div class="banner-info">
+                            <div class="banner-text text-center" style= "margin-top: -75px;">
+                                <a class="white text-center">
+                                    <%@include file="WEB-INF/jspf/header.jspf"%>
+                                </a>          
+                                <h1 class="white">Sua agenda de consultas!</h1>
         <br/>
         <% if (session.getAttribute("user") == null) { %>
         <h3>É preciso se logar para ver o conteúdo!</h3>
@@ -45,11 +55,14 @@
         </table>
         <% } %>
         <% }%>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
-
+                        </div>                                
+                        </div>               
+                        </div>
+                    </div>
+                </div>
+            <div class="banner-logo text-center center-block" style="margin-top: -85px;"><br>
+                <footer><%@include file="WEB-INF/jspf/footer.jspf"%></footer>
+            </div>            
+        </section>  
     </body>
 </html>

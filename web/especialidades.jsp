@@ -21,18 +21,22 @@
                         <div class="banner-info">
                             <div class="banner-text text-center" style= "margin-top: -75px;">
                                 <a class="white text-center">
-                                    <%@include file="WEB-INF/jspf/header.jspf"%>
-                                </a>
-                            </div>     
-                            <h3 class="white">Especialidade</h3>
-                            <h3>Incluir pequenas explicações/cards com as especialidades atendidas (acho que não vai precisar de tabela)</h3>
+                                  <%@include file="WEB-INF/jspf/header.jspf"%>
+                                </a>                                 
+                                <h3 class="white" style="margin-top: 100px;">Especialidades</h3><br>
+                            <div>
+                                <div id="texto">PEDIATRIA      -       UROLOGIA</div>
+                                <img src="src/img/doctor1.jpg" alt="" width="250" height="200" />
+                                <img src="src/img/doctor4.jpg" alt="" width="250" height="200" />
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="banner-logo text-center center-block" style="margin-top: 20px;"><br>
-                    <footer><%@include file="WEB-INF/jspf/footer.jspf"%></footer>
-                </div>
             </div>
+                </div>
+                <div class="banner-logo text-center center-block" style="margin-top: -80px;"><br>
+                    <footer><%@include file="WEB-INF/jspf/footer.jspf"%></footer>
+                </div>            
         </section>  
     </body>
 </html>
