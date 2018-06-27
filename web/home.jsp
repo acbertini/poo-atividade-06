@@ -11,14 +11,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home</title>
-        <link href="src/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <!--<link href="src/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-        <link href="src/css/style.css" rel="stylesheet" type="text/css"/>
-        <script src="src/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="src/js/jquery.easing.min.js" type="text/javascript"></script>
-        <script src="src/js/jquery.min.js" type="text/javascript"></script>
-        <script src="src/js/custom.js" type="text/javascript"></script>
-        <script src="src/contactform/contactform.js" type="text/javascript"></script>-->
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
         <!--banner-->
