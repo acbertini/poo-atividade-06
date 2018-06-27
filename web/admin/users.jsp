@@ -48,6 +48,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Controle de Usuários</title>
+        <%@include file="header.jspf"%>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
         <!--banner-->
@@ -56,12 +57,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="banner-info">
-                            <div class="banner-text text-center" style= "margin-top: -75px;">
-                                <a class="white text-center">
-                                    <%@include file="header.jspf"%>
-                                </a>  
+                            <div class="banner-text text-center" style= "padding-top:20px">
+                                <h1 class="white">Usuários!</h1>
                                 <% if (session.getAttribute("user") == null) { %>
-                                <h3>É preciso se logar para ver o conteúdo!</h3>
+                                <h3 class="white">É preciso se logar para ver o conteúdo!</h3>
                                 <% } else { %>
                                 <% User user = (User) session.getAttribute("user"); %>
                                 <% if (!user.getRole().equals("admin")) { %>
@@ -70,39 +69,42 @@
                                 <% if (error != null) {%>
                                 <h3><%=error%></h3>
                                 <%}%>
+                                
                                 <fieldset>
-                                    <legend>Novo usuário</legend>
+                                    
+                                        <legend class="white">Novo usuário</legend>
+                                    
                                     <form method="post">
-                                        Nome: <input type="text" name="name"/>
+                                        Nome: <input style="color: #000" type="text" name="name"/>
                                         Papel:
-                                        <select name="role">
+                                        <select style="color: #000"  name="role">
                                             <option value="admin">admin</option>
                                             <option value="paciente">paciente</option>
                                         </select>
-                                        Login: <input type="text" name="login"/>
-                                        Pass: <input type="password" name="pass"/>
-                                        <input type="submit" name="formNewUser" value="Add"/>
+                                        Login: <input style="color: #000"  type="text" name="login"/>
+                                        Pass: <input style="color: #000"  type="password" name="pass"/>
+                                        <input style="color: #000"  type="submit" name="formNewUser" value="Add"/>
                                     </form>
                                 </fieldset>
                                 <br/>
                                 <fieldset>
-                                    <legend>Novo médico</legend>
+                                    <legend class="white">Novo médico</legend>
                                     <form method="post">
-                                        Nome: <input type="text" name="name"/>
+                                        Nome: <input style="color: #000"  type="text" name="name"/>
                                         Especialidade:
-                                        <select name="type">
+                                        <select style="color: #000"  name="type">
                                             <option value="1">Cardiologista</option>
                                             <option value="2">Clínico geral</option>
                                             <option value="3">Dermatologista</option>
                                             <option value="4">Pediatra</option>
                                         </select>
-                                        Login: <input type="text" name="login"/>
-                                        Pass: <input type="password" name="pass"/>
-                                        <input type="submit" name="formNewDoctor" value="Add"/>
+                                        Login: <input style="color: #000"  type="text" name="login"/>
+                                        Pass: <input style="color: #000"  type="password" name="pass"/>
+                                        <input style="color: #000"  type="submit" name="formNewDoctor" value="Add"/>
                                     </form>
                                 </fieldset>
                                 <br/>
-                                <table class="table table-bordered">
+                                <table class="table">
                                     <tr>
                                         <th>ID</th>
                                         <th>Papel</th>
@@ -119,7 +121,7 @@
                                         <td>
                                             <form>
                                                 <input type="hidden" name="id" value="<%=u.getId()%>"/>
-                                                <input type="submit" name="formDeleteUser" value="Remover"/>
+                                                <input style="color: #000" type="submit" name="formDeleteUser" value="Remover"/>
                                             </form>
                                         </td>
                                     </tr>
@@ -131,10 +133,11 @@
                         </div>               
                     </div>
                 </div>
-            </div>
-            <div class="banner-logo text-center center-block" style="margin-top: -75px;"><br>
+                            <div class="banner-logo text-center center-block" style="padding-top: 10px;"><br>
                 <footer><%@include file="../WEB-INF/jspf/footer.jspf"%></footer>
-            </div>            
+            </div>       
+            </div>
+                 
         </section>  
     </body>
 </html>
