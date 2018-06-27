@@ -24,7 +24,8 @@
                                     <%@include file="WEB-INF/jspf/header.jspf"%>
                                 </a>
                             </div>     
-                                <h3 class="white">Especialidade</h3>
+                            <h3 class="white">Especialidade</h3>
+                            <h3>Incluir pequenas explicações/cards com as especialidades atendidas (acho que não vai precisar de tabela)</h3>
                         </div>
                     </div>
                 </div>

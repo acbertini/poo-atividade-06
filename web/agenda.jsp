@@ -38,7 +38,7 @@
             <% for (Appointment a : Appointment.getAllAppointments(user.getId())) {%>
             <tr>
                 <td><%= a.getId()  %></td>
-                <td><%= a.getUser_name() %></td>
+                <td>Inserir nome</td>
                 <td><%= a.getDate_appointment() %></td>
             </tr>
             <% } %>

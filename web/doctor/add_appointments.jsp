@@ -25,7 +25,7 @@
         DateFormat format = new SimpleDateFormat("dd/mm/yyyy");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date date = sdf.parse(request.getParameter("date"));
-          long doctorID = Long.parseLong(request.getParameter("id"));
+        long doctorID = Long.parseLong(request.getParameter("id"));
         try {
 //            Appointment.addAvailableAppointment(date, doctorID);
 //            response.sendRedirect(request.getRequestURI());
@@ -42,7 +42,7 @@
     </head>
     <body>
         <h1>Adicionar consultas disponíveis no canal!</h1>
-         <% if (session.getAttribute("user") == null) { %>
+        <% if (session.getAttribute("user") == null) { %>
         <h3>É preciso se logar para ver o conteúdo!</h3>
         <% } else { %>
         <% User user = (User) session.getAttribute("user"); %>
@@ -52,7 +52,38 @@
         <% if (error != null) {%>
         <h3><%=error%></h3>
         <%}%>
-        <%@include file="../WEB-INF/jspf/form_appointment.jspf"%>
+        <fieldset>
+            <legend>Novo horário disponível para consulta</legend>
+            <form method="post">
+                Dia: <input type="date" name="date"/>
+                Horário:
+                <select name="role">
+                    <% for (int i = 9; i <= 16; i++) {%>
+                    <option value="<%=i%>"><%=i%>:00</option>
+                    <% } %>
+                </select>
+                <input type="submit" name="formNewAvailableAppointment" value="Incluir"/>
+            </form>
+        </fieldset>
+        <table border="1px">
+            <tr>
+                <th>ID</th>
+                <th>Dia</th>
+                <th>Horário</th>
+                <th>Disponível</th>
+                <th>Remover</th>
+            </tr>
+            <% for (Appointment a : Appointment.getAllAppointments(user.getId())) {%>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <% }%>
+        </table>
+
         <% } %>
         <% }%>
     </body>

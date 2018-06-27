@@ -30,6 +30,19 @@
             error = e.getMessage();
         }
     }
+    if (request.getParameter("formNewDoctor") != null){
+        String role = "medico";
+        String name = request.getParameter("name");
+        int especialidade = Integer.parseInt(request.getParameter("type"));
+        String login = request.getParameter("login");
+        long hash = request.getParameter("pass").hashCode();
+        try {
+            User.addUser(role, name, login, hash);
+            response.sendRedirect(request.getRequestURI());
+        } catch (Exception e) {
+            error = e.getMessage();
+        }
+    }
 %>
 <html>
     <head>
@@ -57,7 +70,6 @@
                 <select name="role">
                     <option value="admin">admin</option>
                     <option value="paciente">paciente</option>
-                    <option value="medico">medico</option>
                 </select>
                 Login: <input type="text" name="login"/>
                 Pass: <input type="password" name="pass"/>
@@ -65,7 +77,22 @@
             </form>
         </fieldset>
         <br/>
-        <%@include file="../WEB-INF/jspf/form_doctor.jspf"%>
+        <fieldset>
+            <legend>Novo médico</legend>
+            <form method="post">
+                Nome: <input type="text" name="name"/>
+                Especialidade:
+                <select name="type">
+                    <option value="1">Cardiologista</option>
+                    <option value="2">Clínico geral</option>
+                    <option value="3">Dermatologista</option>
+                    <option value="4">Pediatra</option>
+                </select>
+                Login: <input type="text" name="login"/>
+                Pass: <input type="password" name="pass"/>
+                <input type="submit" name="formNewDoctor" value="Add"/>
+            </form>
+        </fieldset>
         <br/>
         <table border="1px">
             <tr>
