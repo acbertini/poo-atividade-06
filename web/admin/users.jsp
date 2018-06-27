@@ -48,7 +48,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Controle de Usuários</title>
-        <%@include file="header.jspf"%>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
         <!--banner-->
@@ -58,7 +57,9 @@
                     <div class="row">
                         <div class="banner-info">
                             <div class="banner-text text-center" style= "margin-top: -75px;">
-                                <h1>Usuários!</h1>
+                                <a class="white text-center">
+                                    <%@include file="header.jspf"%>
+                                </a>  
                                 <% if (session.getAttribute("user") == null) { %>
                                 <h3>É preciso se logar para ver o conteúdo!</h3>
                                 <% } else { %>
@@ -101,7 +102,7 @@
                                     </form>
                                 </fieldset>
                                 <br/>
-                                <table class="table">
+                                <table class="table table-bordered">
                                     <tr>
                                         <th>ID</th>
                                         <th>Papel</th>
