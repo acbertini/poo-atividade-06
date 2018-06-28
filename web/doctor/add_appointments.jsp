@@ -64,14 +64,14 @@
                                 <br/>
                                 <h3 class="white">Adicionar horario de consulta</h3>
                                 <form method="post">
-                                    Dia: <input type="date" name="date"/>
+                                    Dia: <input style="color: #000" type="date" name="date"/>
                                     Horário:
-                                    <select name="role">
+                                    <select style="color: #000"  name="role">
                                         <% for (int i = 9; i <= 16; i++) {%>
                                         <option value="<%=i%>"><%=i%>:00</option>
                                         <% } %>
                                     </select>
-                                    <input type="submit" name="formNewAvailableAppointment" value="Incluir"/>
+                                    <input style="color: #000" type="submit" name="formNewAvailableAppointment" value="Incluir"/>
                                 </form>
                                 <!--
                             <table class="table-bordered">

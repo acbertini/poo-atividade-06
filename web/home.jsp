@@ -27,7 +27,7 @@
                                 <% if (session.getAttribute("user") == null) { %>                    
                                 <h1 class="white" style="margin-top: 120px;"> Ainda não tem conta?</h1>
                                 <h1 class="white">Cadastre-se</h1>
-                                <a href="home1.jsp" class="btn btn-appoint">CADASTRE-SE</a>  
+                                <a href="cadastro.jsp" class="btn btn-appoint">CADASTRE-SE</a>  
                                 <% }%>
                             </div>                                
                         </div>               

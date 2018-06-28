@@ -39,12 +39,12 @@
     <div class="container">
         <div class="col-md-12">
             <div class="navbar-header">
-                <a class="navbar-brand" href="home1.jsp"><img src="../src/img/logo.png" class="img-responsive" style="width: 140px; margin-top: 32px;"></a>                  
+                <a class="navbar-brand" href="home.jsp"><img src="../src/img/logo.png" class="img-responsive" style="width: 140px; margin-top: 32px;"></a>                  
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <%if (session.getAttribute("user") == null) {%>                
                 <ul class="nav navbar-nav" style="margin-right: 450px;">
-                    <li class=""><a href="home1.jsp"></a></li>
+                    <li class=""><a href="home.jsp"></a></li>
                     <li class=""><a href="especialidades.jsp">Especialidades</a></li>
                     <li class=""><a href="cadastro.jsp">Cadastro</a></li>
                     <li class=""><a href="pesquisa.jsp">Pesquisa</a></li>
@@ -63,7 +63,7 @@
 
                 <ul class="nav navbar-nav">
                     <%User user = (User) session.getAttribute("user");%>
-                    <li class="active"><a href="home1.jsp">Home</a></li>
+                    <li class="active"><a href="../home.jsp">Home</a></li>
                     <li class=""><a href="../especialidades.jsp">Especialidades</a></li>
                     <li class=""><a href="../pesquisa.jsp">Pesquisa</a></li>
                         <% if (user.getRole().equals("admin") || user.getRole().equals("ADMIN")) {%>
@@ -78,7 +78,7 @@
                         <% }%>
                     <li class="">
                         <form method="post">
-                            <input type="submit" name="formLogoff" value="Sair"/>
+                            <input style="margin-top: -1px" type="submit" name="formLogoff" class="btn btn-appoint" value="Sair"/>
                         </form>
                     </li>
                 </ul>

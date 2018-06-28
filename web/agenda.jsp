@@ -30,7 +30,7 @@
                                 <h1 class="white">Sua agenda de consultas!</h1>
         <br/>
         <% if (session.getAttribute("user") == null) { %>
-        <h3>É preciso se logar para ver o conteúdo!</h3>
+        <h3 class="white">É preciso se logar para ver o conteúdo!</h3>
         <% } else { %>
         <% User user = (User) session.getAttribute("user"); %>
         <% if (!user.getRole().equals("medico") || user.getRole().equals("MEDICO") ) { %>

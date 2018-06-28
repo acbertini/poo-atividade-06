@@ -27,9 +27,9 @@
                     <div class="row">
                         <div class="banner-info">
                             <div class="banner-text text-center">
-                                <h1 class="white">AQUI PODE COLOCAR O FORM!!!</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <a href="#contact" class="btn btn-appoint">SALVAR</a>
+                                <h1 class="white"></h1>
+                                <p></p>
+                                
                             </div>               
                         </div>
                     </div>

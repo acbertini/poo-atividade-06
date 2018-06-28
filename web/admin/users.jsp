@@ -64,7 +64,7 @@
                                 <% } else { %>
                                 <% User user = (User) session.getAttribute("user"); %>
                                 <% if (!user.getRole().equals("admin")) { %>
-                                <h3>Conteúdo exclusivo para admin do sistema</h3>
+                                <h3 class="white">Conteúdo exclusivo para admin do sistema</h3>
                                 <% } else { %>
                                 <% if (error != null) {%>
                                 <h3><%=error%></h3>
